@@ -313,6 +313,132 @@
             line-height: 1.7;
         }
         
+        /* CTA Secondary Section */
+        .cta-secondary {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, var(--telegram-blue) 0%, #229ED9 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-secondary::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+        
+        .cta-secondary-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .cta-secondary h2 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 800;
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-secondary p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+        }
+        
+        .cta-secondary .cta-button {
+            background: white;
+            color: var(--telegram-blue);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-secondary .cta-button:hover {
+            background: var(--accent-yellow);
+            color: var(--dark);
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 6rem 5%;
+            background: white;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: var(--telegram-blue);
+            box-shadow: 0 10px 30px rgba(0, 136, 204, 0.1);
+        }
+        
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.8rem 2rem;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--dark);
+            transition: color 0.3s;
+        }
+        
+        .faq-question:hover {
+            color: var(--telegram-blue);
+        }
+        
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+            color: var(--telegram-blue);
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 2rem;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 2rem 1.8rem 2rem;
+        }
+        
+        .faq-answer p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
         /* Footer */
         footer {
             padding: 4rem 5%;
@@ -402,6 +528,14 @@
             
             .step-number {
                 margin: 0 auto;
+            }
+            
+            .cta-secondary h2 {
+                font-size: 2rem;
+            }
+            
+            .cta-secondary p {
+                font-size: 1rem;
             }
             
             .project-links {
@@ -505,6 +639,141 @@
             </div>
         </div>
     </section>
+
+  <section class="cta-secondary">
+        <div class="cta-secondary-content">
+            <h2>Ready to Plan Your Next Adventure?</h2>
+            <p>Start creating your personalized itinerary now</p>
+            <a href="https://t.me/touristitinerary_bot" class="cta-button" target="_blank">
+                <span class="telegram-icon">✈️</span>
+                Try for Free on Telegram
+            </a>
+        </div>
+    </section>
+
+     <section class="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    How does the Tourist Itinerary Bot work?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Simply open the bot on Telegram (@touristitinerary_bot), send your destination and travel preferences, and our AI will generate a personalized itinerary for you in seconds. The bot uses advanced AI to analyze your interests, budget, and time constraints to create the perfect travel plan.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    Is the bot free to use?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>The Tourist Itinerary Bot is free to try! You can test it out and see how it works before deciding if you want to continue using it for your travel planning needs.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    What locations does the bot cover?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>The bot can suggest itineraries for any location in the world! Whether you're planning a trip to Paris, Tokyo, New York, or a small village in the countryside, our AI has you covered with local insights and recommendations.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    Can I customize my itinerary?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! The bot will ask you for your destination, when you're visiting, and the length of your visit. Based on this information, it generates a personalized itinerary tailored to your specific travel dates and duration.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    How accurate are the suggested routes and timings?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>The bot uses real-world data and insights from locals and travel experts to suggest efficient routes and realistic timings. However, we always recommend allowing some flexibility in your schedule for unexpected discoveries or delays.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    Do I need internet access to use the bot?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>You'll need internet access to generate your itinerary through Telegram. Once generated, we recommend taking screenshots or saving the itinerary for offline access during your travels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the Tourist Itinerary Bot work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply open the bot on Telegram (@touristitinerary_bot), send your destination and travel preferences, and our AI will generate a personalized itinerary for you in seconds. The bot uses advanced AI to analyze your interests, budget, and time constraints to create the perfect travel plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the bot free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Tourist Itinerary Bot is free to try! You can test it out and see how it works before deciding if you want to continue using it for your travel planning needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What locations does the bot cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The bot can suggest itineraries for any location in the world! Whether you're planning a trip to Paris, Tokyo, New York, or a small village in the countryside, our AI has you covered with local insights and recommendations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I customize my itinerary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! The bot will ask you for your destination, when you're visiting, and the length of your visit. Based on this information, it generates a personalized itinerary tailored to your specific travel dates and duration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate are the suggested routes and timings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The bot uses real-world data and insights from locals and travel experts to suggest efficient routes and realistic timings. However, we always recommend allowing some flexibility in your schedule for unexpected discoveries or delays."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need internet access to use the bot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You'll need internet access to generate your itinerary through Telegram. Once generated, we recommend taking screenshots or saving the itinerary for offline access during your travels."
+          }
+        }
+      ]
+    }
+    </script>
     
     <footer>
         <div class="footer-content">
@@ -526,5 +795,22 @@
             </div>
         </div>
     </footer>
+
+  <script>
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const allFaqItems = document.querySelectorAll('.faq-item');
+            
+            // Close all other FAQ items
+            allFaqItems.forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ item
+            faqItem.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
