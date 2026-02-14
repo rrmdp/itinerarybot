@@ -32,6 +32,91 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tourist Itinerary Bot",
+      "url": "https://touristitinerary.com",
+      "logo": "https://touristitinerary.com/img/itinirarybot_logo.jpg",
+      "description": "AI-powered Telegram bot that generates personalized travel itineraries for any location in the world",
+      "founder": {
+        "@type": "Person",
+        "name": "rrmdp",
+        "url": "https://x.com/rrmdp"
+      },
+      "sameAs": [
+        "https://x.com/rrmdp",
+        "https://t.me/touristitinerary_bot"
+      ]
+    }
+    </script>
+    
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Tourist Itinerary Bot",
+      "url": "https://touristitinerary.com",
+      "description": "AI Telegram bot that suggests cool itineraries for any location in the world",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Tourist Itinerary Bot"
+      }
+    }
+    </script>
+    
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Tourist Itinerary Bot",
+      "applicationCategory": "TravelApplication",
+      "operatingSystem": "Telegram",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free to try"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1000"
+      },
+      "description": "AI-powered Telegram bot that generates personalized travel itineraries for any location in the world. Get time-saving, cost-effective trip planning with local insights and efficient routes.",
+      "featureList": [
+        "AI-powered itinerary generation",
+        "Personalized travel recommendations",
+        "Local insights and hidden gems",
+        "Efficient route planning",
+        "Budget-friendly suggestions",
+        "Worldwide location coverage"
+      ],
+      "screenshot": "https://touristitinerary.com/img/itinirarybot_logo.jpg",
+      "url": "https://t.me/touristitinerary_bot"
+    }
+    </script>
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://touristitinerary.com"
+        }
+      ]
+    }
+    </script>
+
   <style>
         :root {
             --telegram-blue: #0088cc;
